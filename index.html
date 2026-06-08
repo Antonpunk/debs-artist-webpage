@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deb Mortl — Artist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Deb <span>Mortl</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#gallery" onclick="closeNav()">Gallery</a></li>
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#announcements" onclick="closeNav()">News</a></li>
+    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Painter &amp; Jewelry Artist</p>
+    <h1 class="hero-name">Deb<br><em>Mortl</em></h1>
+    <p class="hero-sub">Paintings of water, shore &amp; sky —<br>jewelry shaped by tide and texture.</p>
+    <a href="#gallery" class="hero-cta">
+      View the work
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=1200&q=80" alt="Abstract coastal painting" loading="eager" />
+    <div class="hero-image-overlay"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <p class="section-label fade-up">Portfolio</p>
+  <h2 class="section-title fade-up">Selected <em>Works</em></h2>
+  <div class="gallery-filters fade-up">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="painting">Paintings</button>
+    <button class="filter-btn" data-filter="jewelry">Jewelry</button>
+  </div>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-image-wrap fade-up">
+      <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80" alt="Deb Mortl in her studio" />
+      <div class="about-image-accent"></div>
+    </div>
+    <div class="fade-up">
+      <p class="section-label">About</p>
+      <h2 class="section-title">The <em>Artist</em></h2>
+      <div class="divider"></div>
+      <div class="about-text">
+        <p>Deb Mortl is a painter and jewelry artist whose work is rooted in the rhythms of the coast — the way light breaks across water, the weight of wet sand, the slow erosion of stone.</p>
+        <p>Her paintings are <strong>layered explorations of texture and abstraction</strong>, built up with palette knives, brushes, and found materials. Each piece holds the memory of a specific place, a specific tide.</p>
+        <p>Her jewelry extends the same sensibility into wearable form — organic shapes cast in silver and bronze, finished with the same attention to surface and touch that defines her canvases.</p>
+        <p>Deb works from her studio on the coast, where the light changes everything.</p>
+      </div>
+      <div class="about-tags">
+        <span class="about-tag">Oil on Canvas</span>
+        <span class="about-tag">Acrylic</span>
+        <span class="about-tag">Mixed Media</span>
+        <span class="about-tag">Silver &amp; Bronze</span>
+        <span class="about-tag">Coastal</span>
+        <span class="about-tag">Abstract</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANNOUNCEMENTS -->
+<section id="announcements">
+  <p class="section-label fade-up">News &amp; Events</p>
+  <h2 class="section-title fade-up">Announcements</h2>
+  <div class="announce-grid fade-up">
+    <div class="announce-item">
+      <p class="announce-date">June 2025</p>
+      <h3 class="announce-title">Summer Group Exhibition</h3>
+      <p class="announce-body">Deb will be showing four new large-format paintings at the Coastal Arts Center summer group show. Opening reception June 14th, 6–9pm.</p>
+      <a href="#contact" class="announce-link">Inquire <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="announce-item">
+      <p class="announce-date">May 2025</p>
+      <h3 class="announce-title">New Jewelry Collection</h3>
+      <p class="announce-body">A new series of tide-cast bronze and sterling pieces is now available. Each piece is one-of-a-kind, formed using sand and sea glass found on the shore.</p>
+      <a href="#gallery" class="announce-link">View pieces <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="announce-item">
+      <p class="announce-date">March 2025</p>
+      <h3 class="announce-title">Studio Open Day</h3>
+      <p class="announce-body">Join Deb for an open studio afternoon — see works in progress, ask questions, and experience the space where the work is made. March 22nd, 1–5pm.</p>
+      <a href="#contact" class="announce-link">RSVP <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="fade-up">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Contact</h2>
+      <div class="divider"></div>
+      <p class="contact-intro">For inquiries about commissions, exhibitions, or to learn more about a specific piece, please reach out. Deb responds personally to every message.</p>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:hello@debmortl.com">hello@debmortl.com</a>
+      </div>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Coastal Studio — available by appointment</span>
+      </div>
+    </div>
+    <div class="fade-up">
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" type="text" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" type="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="cf-subject">Subject</label>
+          <input id="cf-subject" type="text" placeholder="Commission, exhibition, general…" />
+        </div>
+        <div class="form-group">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" rows="5" placeholder="Tell Deb about your interest…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Deb Mortl</span>
+  <span class="footer-copy">&copy; 2025 Deb Mortl. All rights reserved.</span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxBtn()">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" onclick="lbNav(-1)">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lbImg" src="" alt="" />
+    <div class="lightbox-info">
+      <h3 class="lightbox-title" id="lbTitle"></h3>
+      <p class="lightbox-desc" id="lbDesc"></p>
+    </div>
+  </div>
+  <button class="lightbox-nav lightbox-next" onclick="lbNav(1)">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 12"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
