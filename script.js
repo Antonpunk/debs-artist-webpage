@@ -1,12 +1,9 @@
 const works = [
   {id:1,cat:'painting',title:'Tide Memory I',info:'Oil on canvas · 36×48"',desc:'Layers of translucent blue and ochre built up over weeks, capturing the moment the tide recedes and leaves its mark on sand.',img:'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=800&q=80',sold:false},
-  {id:2,cat:'jewelry',title:'Shore Fragment Pendant',info:'Sterling silver · One of a kind',desc:'Cast directly from a fragment of driftwood found at low tide. The surface retains every grain of the original wood.',img:'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80',sold:true},
   {id:3,cat:'painting',title:'Horizon, Soft Light',info:'Acrylic on linen · 24×30"',desc:'A study in the way coastal light flattens and diffuses at dusk — warm grays dissolving into pale gold.',img:'https://images.unsplash.com/photo-1549490349-8643362247b5?w=800&q=80',sold:false},
   {id:4,cat:'painting',title:'Deep Water Study',info:'Oil on canvas · 48×60"',desc:'The darkest piece in the current series — deep prussian blues and raw umber, textured with sand and sea glass.',img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',sold:true},
-  {id:5,cat:'jewelry',title:'Tide Ring No. 3',info:'Bronze · Size 7',desc:'Forged and textured by hand, the surface mimics the rippled sand left by a retreating wave.',img:'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80',sold:false},
   {id:6,cat:'painting',title:'Shore at Noon',info:'Mixed media · 20×20"',desc:'Built with palette knife, sand, and encaustic wax. The surface catches light the way wet stone does.',img:'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',sold:false},
   {id:7,cat:'painting',title:'Salt Flat',info:'Acrylic on canvas · 30×40"',desc:'A wide, quiet painting — the horizon sits very high, almost all foreground, all texture and heat.',img:'https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=800&q=80',sold:false},
-  {id:8,cat:'jewelry',title:'Coastal Cuff',info:'Sterling silver · Adjustable',desc:'Hammered and oxidized silver with a wave-form profile. Each one is slightly different — made one at a time.',img:'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&q=80',sold:true},
   {id:9,cat:'painting',title:'Estuary',info:'Oil on linen · 40×50"',desc:'Where the river meets the sea — murky greens, silted browns, and the constant movement of water finding its level.',img:'https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=800&q=80',sold:false},
 ];
 
