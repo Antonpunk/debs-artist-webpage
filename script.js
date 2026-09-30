@@ -8,53 +8,76 @@
 
 const works = [
   /* ── PAINTINGS ──
-     Titles, materials and descriptions are PLACEHOLDERS. The previous draft had
-     invented ocean-themed titles and descriptions that did not match Deb's
-     practice; replace these with her real details.
+     Far North carries the only real photograph so far. The twelve pieces after
+     it come from Deb's catalogue sheet: titles, materials, dimensions and
+     prices are hers exactly as she keeps them.
 
-     `fallback:''` is deliberate. With no photo in images/ and no stock fallback,
-     wireImage() shows the "photo coming soon" panel instead of displaying a
-     stock photograph of someone else's work as if it were her painting. */
-  {id:1,cat:'painting',title:'Far North',info:'Oil on canvas · 36 × 36 in · $1,495',
+     `info` is the formatted line shown on the card. `desc` is the raw catalogue
+     line, shown in the lightbox. `sold:true` fills the red dot.
+
+     No photographs exist for painting-02 onward yet, so each shows the
+     photo-pending panel. `fallback:''` is deliberate and must stay empty until a
+     real photograph exists - see images/README.md. */
+  {id:1,cat:'painting',title:'Far North',info:'Oil on canvas \u00b7 36 \u00d7 36 in \u00b7 $1,495',
    desc:'Deb Mortl Far North oil on canvas 36x36 $1,495',
    img:'images/painting-01.jpg',fallback:'',sold:false},
-  {id:2,cat:'painting',title:'Untitled II',info:'Oil on canvas · dimensions to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+  {id:2,cat:'painting',title:'Meadow\'s Edge',info:'Oil on panel \u00b7 24 \u00d7 30 in \u00b7 $895',
+   desc:'Deb Mortl Meadow\'s Edge oil on panel 24x30 $895 deliver in June',
    img:'images/painting-02.jpg',fallback:'',sold:false},
-  {id:3,cat:'painting',title:'Untitled III',info:'Oil on linen · dimensions to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+  {id:3,cat:'painting',title:'Late Launch',info:'Oil on canvas \u00b7 9.5 \u00d7 9.5 in, framed \u00b7 $295',
+   desc:'Deb Mortl Late Launch oil on canvas 9.5x9.5 Framed $295 ret.',
    img:'images/painting-03.jpg',fallback:'',sold:false},
-  {id:4,cat:'painting',title:'Untitled IV',info:'Mixed media · dimensions to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+  {id:4,cat:'painting',title:'Beach Days',info:'Oil on canvas \u00b7 9.5 \u00d7 9.5 in, framed \u00b7 $295',
+   desc:'Deb Mortl Beach Days oil on canvas 9.5x9.5 Framed $295 ret.',
    img:'images/painting-04.jpg',fallback:'',sold:false},
-  {id:5,cat:'painting',title:'Untitled V',info:'Acrylic on canvas · dimensions to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+  {id:5,cat:'painting',title:'Woodland Welcome',info:'Oil on canvas \u00b7 24 \u00d7 36 in \u00b7 $895',
+   desc:'Deb Mortl Woodland Welcome oil on canvas 24x36 $895 ret',
    img:'images/painting-05.jpg',fallback:'',sold:false},
-  {id:6,cat:'painting',title:'Untitled VI',info:'Oil on panel · dimensions to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+  {id:6,cat:'painting',title:'Gold Splendor',info:'Oil on canvas \u00b7 9.5 \u00d7 9.5 in, framed \u00b7 $295',
+   desc:'Deb Mortl Gold Splendor oil on canvas 9.5x9.5 Framed $295 ret',
    img:'images/painting-06.jpg',fallback:'',sold:false},
+  {id:7,cat:'painting',title:'Lake Life',info:'Oil on canvas \u00b7 9.5 \u00d7 9.5 in, framed \u00b7 $295',
+   desc:'Deb Mortl Lake Life oil on canvas 9.5x9.5 Framed $295 ret',
+   img:'images/painting-07.jpg',fallback:'',sold:false},
+  {id:8,cat:'painting',title:'Sailor\'s Delight',info:'Oil on canvas \u00b7 25 \u00d7 32 in, framed \u00b7 $995',
+   desc:'Deb Mortl Sailor\'s Delight oil on canvas 25x32 Framed $995 kept for 2024',
+   img:'images/painting-08.jpg',fallback:'',sold:false},
+  {id:9,cat:'painting',title:'Woodland Allegory',info:'Oil on canvas \u00b7 13 \u00d7 13 in, framed \u00b7 $395',
+   desc:'Deb Mortl Woodland Allegory oil on canvas 13x13 Framed $395',
+   img:'images/painting-09.jpg',fallback:'',sold:true},
+  {id:10,cat:'painting',title:'Dreaming of Summer',info:'Oil on canvas \u00b7 24 \u00d7 36 in \u00b7 $895',
+   desc:'Deb Mortl Dreaming of Summer oil on canvas 24x36 $895 ret',
+   img:'images/painting-10.jpg',fallback:'',sold:false},
+  {id:11,cat:'painting',title:'Color of Light',info:'Oil on canvas \u00b7 13 \u00d7 13 in, framed \u00b7 $395',
+   desc:'Deb Mortl Color of Light oil on canvas 13x13 framed $395 ret',
+   img:'images/painting-11.jpg',fallback:'',sold:false},
+  {id:12,cat:'painting',title:'Distant Song',info:'Oil on canvas \u00b7 13 \u00d7 13 in, framed \u00b7 $395',
+   desc:'Deb Mortl Distant Song oil on canvas 13x13 Framed $395',
+   img:'images/painting-12.jpg',fallback:'',sold:true},
+  {id:13,cat:'painting',title:'Muse',info:'Oil on canvas \u00b7 21.5 \u00d7 21.5 in, framed \u00b7 $695',
+   desc:'Deb Mortl Muse oil on canvas 21.5x21.5 framed $695 ret',
+   img:'images/painting-13.jpg',fallback:'',sold:false},
 
-  /* ── JEWELRY ──
-     No photographs yet, so every piece shows the "photo coming soon" panel.
-     `sold` is false throughout — the previous draft flagged pieces sold, which
-     was invented. */
+  /* ── JEWELRY (Third Coast Jewelry) ──
+     No jewelry catalogue has been supplied yet, so these six remain unnamed
+     placeholders. No photographs exist, so each shows the pending panel. */
   {id:101,cat:'jewelry',title:'Untitled Pendant',info:'Materials to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+   desc:'Placeholder \u2014 Deb\u2019s description to come.',
    img:'images/jewelry-pendant.jpg',fallback:'',sold:false},
   {id:102,cat:'jewelry',title:'Untitled Earrings',info:'Materials to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+   desc:'Placeholder \u2014 Deb\u2019s description to come.',
    img:'images/jewelry-earrings.jpg',fallback:'',sold:false},
   {id:103,cat:'jewelry',title:'Untitled Cuff',info:'Materials to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+   desc:'Placeholder \u2014 Deb\u2019s description to come.',
    img:'images/jewelry-cuff.jpg',fallback:'',sold:false},
   {id:104,cat:'jewelry',title:'Untitled Brooch',info:'Materials to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+   desc:'Placeholder \u2014 Deb\u2019s description to come.',
    img:'images/jewelry-brooch.jpg',fallback:'',sold:false},
   {id:105,cat:'jewelry',title:'Untitled Necklace',info:'Materials to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+   desc:'Placeholder \u2014 Deb\u2019s description to come.',
    img:'images/jewelry-necklace.jpg',fallback:'',sold:false},
   {id:106,cat:'jewelry',title:'Untitled Ring',info:'Materials to be confirmed',
-   desc:'Placeholder — Deb\u2019s description to come.',
+   desc:'Placeholder \u2014 Deb\u2019s description to come.',
    img:'images/jewelry-ring.jpg',fallback:'',sold:false},
 ];
 

@@ -19,11 +19,18 @@ servers even though it doesn't on Windows.
 | Filename | Shown as |
 |---|---|
 | `painting-01.jpg` | Far North — Oil on canvas · 36 × 36 in · $1,495 |
-| `painting-02.jpg` | Untitled II — Oil on canvas · dimensions to be confirmed |
-| `painting-03.jpg` | Untitled III — Oil on linen · dimensions to be confirmed |
-| `painting-04.jpg` | Untitled IV — Mixed media · dimensions to be confirmed |
-| `painting-05.jpg` | Untitled V — Acrylic on canvas · dimensions to be confirmed |
-| `painting-06.jpg` | Untitled VI — Oil on panel · dimensions to be confirmed |
+| `painting-02.jpg` | Meadow's Edge — Oil on panel · 24 × 30 in · $895 |
+| `painting-03.jpg` | Late Launch — Oil on canvas · 9.5 × 9.5 in, framed · $295 |
+| `painting-04.jpg` | Beach Days — Oil on canvas · 9.5 × 9.5 in, framed · $295 |
+| `painting-05.jpg` | Woodland Welcome — Oil on canvas · 24 × 36 in · $895 |
+| `painting-06.jpg` | Gold Splendor — Oil on canvas · 9.5 × 9.5 in, framed · $295 |
+| `painting-07.jpg` | Lake Life — Oil on canvas · 9.5 × 9.5 in, framed · $295 |
+| `painting-08.jpg` | Sailor's Delight — Oil on canvas · 25 × 32 in, framed · $995 |
+| `painting-09.jpg` | Woodland Allegory — Oil on canvas · 13 × 13 in, framed · $395 (sold) |
+| `painting-10.jpg` | Dreaming of Summer — Oil on canvas · 24 × 36 in · $895 |
+| `painting-11.jpg` | Color of Light — Oil on canvas · 13 × 13 in, framed · $395 |
+| `painting-12.jpg` | Distant Song — Oil on canvas · 13 × 13 in, framed · $395 (sold) |
+| `painting-13.jpg` | Muse — Oil on canvas · 21.5 × 21.5 in, framed · $695 |
 
 ### Jewelry
 
