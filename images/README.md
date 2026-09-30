@@ -81,8 +81,10 @@ limits. Resize before committing:
 
 | Where it appears | Long edge | Target size | Format |
 |---|---|---|---|
-| Gallery / lightbox | 1600 px | 200–400 KB | JPEG quality ~80, or WebP |
-| Hero image | 2000 px | 300–500 KB | JPEG quality ~80, or WebP |
+| Gallery / lightbox | 1600 px | 250–550 KB | JPEG quality ~80, or WebP |
+| Hero image | 2000 px | 350–650 KB | JPEG quality ~80, or WebP |
+
+Detailed brushwork compresses poorly, so paintings will sit at the upper end of these ranges–a dense canvas detail at 1600 px is around 450–550 KB. Prefer the higher quality over the smaller file: the work is the point of the site.
 
 Also set the **color profile to sRGB** and strip the camera's GPS/location EXIF
 data before publishing. Most photo editors can do both on export.
