@@ -148,7 +148,10 @@ nav{
   background:var(--paper-2);
   border:1px solid var(--rule);
   box-shadow:0 18px 40px -32px rgba(34,32,29,.5);
-  aspect-ratio:4/5;
+
+  /* Matches the hero artwork's own proportions. Cover-cropping a square
+     painting into 4/5 would cut the top and bottom off the work. */
+  aspect-ratio:1/1;
   max-height:76svh;
   margin-inline:auto;
   display:flex;align-items:center;justify-content:center;
@@ -549,7 +552,7 @@ footer{
   .nav-toggle{display:flex}
   #hero{grid-template-columns:1fr;align-items:start;padding-top:calc(var(--nav-h) + 24px)}
   .hero-art{order:-1;width:100%}
-  .hero-image{aspect-ratio:4/3;max-height:none}
+  .hero-image{aspect-ratio:1/1;max-height:none}
   .gallery-grid{columns:2;column-gap:14px}
   .gallery-item{margin-bottom:24px}
   .about-grid{grid-template-columns:1fr}
@@ -579,7 +582,11 @@ footer{
 .about-image-wrap.img-missing{
   display:flex;align-items:center;justify-content:center;
   min-height:240px;
-  background:repeating-linear-gradient(135deg,var(--paper-2) 0 10px,#eae2d5 10px 20px);
+  background:
+    repeating-linear-gradient(135deg, rgba(201,154,63,.16) 0 10px, rgba(201,154,63,0) 10px 20px),
+    radial-gradient(115% 95% at 24% 86%, rgba(107,85,112,.32), rgba(107,85,112,0) 68%),
+    radial-gradient(115% 95% at 80% 14%, rgba(158,184,74,.30), rgba(158,184,74,0) 66%),
+    linear-gradient(165deg, #f7eddb 0%, #eedfc4 55%, #e7d6c2 100%);
   border:1px solid var(--rule);
 }
 .gallery-item-inner.img-missing .gallery-item-overlay{display:none}
@@ -593,7 +600,9 @@ footer{
   line-height:1.45;
   padding:28px 20px;
 }
-.hero-image.img-missing{background:repeating-linear-gradient(135deg,var(--paper-2) 0 10px,#eae2d5 10px 20px)}
+.hero-image.img-missing{background:
+  repeating-linear-gradient(135deg, rgba(201,154,63,.16) 0 10px, rgba(201,154,63,0) 10px 20px),
+  linear-gradient(165deg, #f7eddb 0%, #eedfc4 55%, #e7d6c2 100%)}
 .hero-image.img-missing::after{
   content:attr(data-label);
   font-family:var(--serif);font-style:italic;font-size:16px;
@@ -614,7 +623,9 @@ footer{
   font-family:var(--serif);
   font-size:19px;font-style:italic;
   color:rgba(250,247,242,0.5);
-  background:repeating-linear-gradient(135deg,rgba(250,247,242,0.05) 0 10px,rgba(250,247,242,0.09) 10px 20px);
+  background:
+    repeating-linear-gradient(135deg, rgba(201,154,63,.08) 0 10px, rgba(201,154,63,.02) 10px 20px),
+    linear-gradient(165deg, rgba(247,237,219,.07) 0%, rgba(107,85,112,.12) 100%);
   border:1px solid rgba(250,247,242,0.15);
 }
 .gallery-empty{
