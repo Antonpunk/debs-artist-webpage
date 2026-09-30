@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Deb Mortl — Paintings &amp; Jewelry</title>
-<meta name="description" content="Deb Mortl is a Wisconsin painter working in abstract landscape — layered color and weathered texture. Alongside the paintings she makes jewelry by hand in silver, stone and copper." />
+<title>Deb Mortl — Paintings &amp; Third Coast Jewelry</title>
+<meta name="description" content="Deb Mortl is a Wisconsin painter working in abstract landscape — layered color and weathered texture. Her jewelry line, Third Coast Jewelry, is made from beach glass shaped by time." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -19,9 +19,16 @@
 <!-- ─────────────────────────────────────────────────────────────────────────
      CONTENT STATUS - READ BEFORE PUBLISHING
 
-     ARTIST'S STATEMENT (#statement): Deb's own words, supplied by the artist.
-     This is the authoritative text on the site. Do not edit, shorten or
-     "improve" it - her wording is the point. If it needs to change, ask her.
+     DEB'S OWN WORDS - two passages, both supplied by the artist. Treat each as
+     authoritative and quote it verbatim: do not edit, shorten or "improve" it.
+     If either needs to change, ask her.
+       - Artist's Statement  -> #statement  (painting, 2 paragraphs)
+       - About               -> #about      (both practices, 2 paragraphs)
+     The one exception is the final collage sentence in #about, which is
+     researched copy she has not confirmed.
+
+     BRAND: the jewelry line is **Third Coast Jewelry** (the Great Lakes). An
+     earlier "Left Coast Jewelry" working name was never published on this site.
 
      PLACEHOLDERS: the gallery catalogue (-> script.js) and the exhibition dates
      (#announcements) are still placeholders. The previous draft carried invented
@@ -30,15 +37,15 @@
 
      Still to confirm with Deb:
        - her real piece titles, materials and dimensions  -> script.js
+       - jewellery materials beyond beach glass (tags currently list none)
        - the contact address and whether hello@debmortl.com is live
        - the Formspree form ID (the form will not pretend it sent until set)
        - exhibition dates and gallery representation      -> #announcements
-       - the remaining biography wording                  -> #about
      ───────────────────────────────────────────────────────────────────────── -->
 
 <!-- NAV -->
 <nav>
-  <a href="#hero" class="nav-logo">Deb <span>Mortl</span></a>
+  <a href="#hero" class="nav-logo">Deb <span>Mortl</span> <em>&middot; Third Coast Jewelry</em></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#gallery" onclick="showCategory('all')">Paintings</a></li>
     <li><a href="#gallery" onclick="showCategory('jewelry')">Jewelry</a></li>
@@ -57,7 +64,7 @@
   <div class="hero-text">
     <p class="hero-eyebrow">Oil on canvas &amp; panel · Wisconsin</p>
     <h1 class="hero-name">Deb<br><em>Mortl</em></h1>
-    <p class="hero-sub">Layers of color, weathered like the land — and jewelry made by hand in silver, stone and copper.</p>
+    <p class="hero-sub">Layers of color, weathered like the land — and Third Coast Jewelry: beach glass, shaped over time.</p>
     <div class="hero-actions">
       <a href="#gallery" class="hero-cta">
         View the work
@@ -76,7 +83,7 @@
 <section id="gallery">
   <p class="section-label fade-up">Portfolio</p>
   <h2 class="section-title fade-up">Selected <em>Works</em></h2>
-  <p class="section-intro fade-up">Abstracted landscapes built from many transparent layers, alongside hand-fabricated jewelry. Photographs and full details are being added piece by piece.</p>
+  <p class="section-intro fade-up">Abstracted landscapes built from many transparent layers, alongside Third Coast Jewelry — beach glass shaped by time. Photographs and full details are being added piece by piece.</p>
   <div class="gallery-filters fade-up">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="painting">Paintings</button>
@@ -105,21 +112,21 @@
       <h2 class="section-title">The <em>Artist</em></h2>
       <div class="divider"></div>
       <div class="about-text">
-        <p>Alongside the paintings, Deb makes jewelry by hand — sterling silver and brass, worked with the same instinct for surface and layering. Patinas, hammered texture and set stone echo the palette of the canvases, so a pendant and a painting often read as a matched pair.</p>
+        <p>My work moves between two tides, painting and making beach glass jewelry. Both begin with fragments - of color, of memory, of place - and evolve into something whole. I am drawn to what is shaped over time, whether it&rsquo;s a brushstroke layered and reworked on canvas or a piece of glass softened by years in water.</p>
+        <p>My jewelry practice is an extension of this philosophy, I approach my jewelry making as a collaboration with the materials I find. I&rsquo;m interested in how time alters objects, how art can hold both fragility and strength in its transformation.</p>
         <p>Collage sometimes adds one more layer of pattern.</p>
       </div>
       <div class="about-tags">
+        <span class="about-tag">Beach Glass</span>
         <span class="about-tag">Oil on Canvas</span>
         <span class="about-tag">Acrylic</span>
         <span class="about-tag">Mixed Media</span>
         <span class="about-tag">Collage</span>
         <span class="about-tag">Landscape</span>
         <span class="about-tag">Abstract</span>
-        <span class="about-tag">Sterling Silver</span>
-        <span class="about-tag">Brass</span>
         <span class="about-tag">Hand-Fabricated Jewelry</span>
       </div>
-      <p class="section-label" style="margin-top:32px;color:#a9a29a">Biography pending Deb's approval</p>
+      <p class="section-label" style="margin-top:32px;color:#a9a29a">Third Coast Jewelry &middot; catalogue details being confirmed</p>
     </div>
   </div>
 </section>
@@ -183,7 +190,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-logo">Deb Mortl</span>
+  <span class="footer-logo">Deb Mortl &middot; Third Coast Jewelry</span>
   <span class="footer-copy">&copy; <span id="year">2026</span> Deb Mortl. All rights reserved.</span>
 </footer>
 
