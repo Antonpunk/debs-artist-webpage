@@ -3,21 +3,48 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Deb Mortl — Artist</title>
+<title>Deb Mortl — Paintings &amp; Jewelry</title>
+<meta name="description" content="Deb Mortl is a Wisconsin painter working in abstract landscape — layered color and weathered texture. Alongside the paintings she makes jewelry by hand in silver, stone and copper." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+
+<!-- Without JS the scroll-reveal never fires, which would hide every section
+     below the fold. This keeps the whole site readable if JS fails or is off. -->
+<noscript><style>.fade-up{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
+
+<!-- ─────────────────────────────────────────────────────────────────────────
+     CONTENT STATUS - READ BEFORE PUBLISHING
+
+     ARTIST'S STATEMENT (#statement): Deb's own words, supplied by the artist.
+     This is the authoritative text on the site. Do not edit, shorten or
+     "improve" it - her wording is the point. If it needs to change, ask her.
+
+     PLACEHOLDERS: the gallery catalogue (-> script.js) and the exhibition dates
+     (#announcements) are still placeholders. The previous draft carried invented
+     specifics (ocean themes, a "Coastal Studio", named shows with dates) and used
+     stock photographs as if they were her paintings; those were removed.
+
+     Still to confirm with Deb:
+       - her real piece titles, materials and dimensions  -> script.js
+       - the contact address and whether hello@debmortl.com is live
+       - the Formspree form ID (the form will not pretend it sent until set)
+       - exhibition dates and gallery representation      -> #announcements
+       - the remaining biography wording                  -> #about
+     ───────────────────────────────────────────────────────────────────────── -->
 
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">Deb <span>Mortl</span></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#gallery" onclick="closeNav()">Gallery</a></li>
+    <li><a href="#gallery" onclick="showCategory('all')">Paintings</a></li>
+    <li><a href="#gallery" onclick="showCategory('jewelry')">Jewelry</a></li>
+    <li><a href="#statement" onclick="closeNav()">Statement</a></li>
     <li><a href="#about" onclick="closeNav()">About</a></li>
-    <li><a href="#announcements" onclick="closeNav()">News</a></li>
+    <li><a href="#announcements" onclick="closeNav()">Exhibitions</a></li>
     <li><a href="#contact" onclick="closeNav()">Contact</a></li>
   </ul>
   <div class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Menu">
@@ -28,17 +55,20 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-text">
-    <p class="hero-eyebrow">Abstract Landscape Painter</p>
+    <p class="hero-eyebrow">Oil on canvas &amp; panel · Wisconsin</p>
     <h1 class="hero-name">Deb<br><em>Mortl</em></h1>
-    <p class="hero-sub">Abstract landscapes of color &amp; texture —<br>earthy blues, greens, and the layers of the prairie.</p>
-    <a href="#gallery" class="hero-cta">
-      View the work
-      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
+    <p class="hero-sub">Layers of color, weathered like the land — and jewelry made by hand in silver, stone and copper.</p>
+    <div class="hero-actions">
+      <a href="#gallery" class="hero-cta">
+        View the work
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#gallery" class="hero-cta ghost" onclick="showCategory('jewelry')">Jewelry</a>
+    </div>
   </div>
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=1200&q=80" alt="Abstract coastal painting" loading="eager" />
-    <div class="hero-image-overlay"></div>
+  <div class="hero-art">
+    <div class="hero-image img-missing" data-label="Studio photograph coming soon"></div>
+    <span class="art-caption"><i>Placeholder</i> — Deb's own photograph to come</span>
   </div>
 </section>
 
@@ -46,64 +76,62 @@
 <section id="gallery">
   <p class="section-label fade-up">Portfolio</p>
   <h2 class="section-title fade-up">Selected <em>Works</em></h2>
+  <p class="section-intro fade-up">Abstracted landscapes built from many transparent layers, alongside hand-fabricated jewelry. Photographs and full details are being added piece by piece.</p>
   <div class="gallery-filters fade-up">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="painting">Paintings</button>
+    <button class="filter-btn" data-filter="jewelry">Jewelry</button>
   </div>
   <div class="gallery-grid" id="galleryGrid"></div>
 </section>
 
+<!-- ARTIST'S STATEMENT - Deb's own words, supplied by the artist.
+     Quoted verbatim. Do not edit, shorten or "improve" this text. -->
+<section id="statement">
+  <div class="statement-inner">
+    <p class="section-label fade-up">Artist&rsquo;s Statement</p>
+    <div class="statement-text fade-up">
+      <p>My landscape paintings have evolved from traditional and representational to a more non-objective style as I try to capture the essence of the landscape through removing unnecessary and distracting details. With the age of digital photography and the ease and immediacy of the medium, I think representation is better left for the camera. My paintings feel more idealistic when I focus on color and texture in my composition and let the layers of color resonate against each other. Abstract landscapes become more open-ended, letting the viewer decipher their own personal meaning from it.</p>
+      <p>I rarely start with a plan for my paintings, it is more of a negotiation with the painting itself as it progresses. I use a palette rich in earthy blues, greens and browns, with gold and reds thrown in for good measure. I build many, many transparent layers until the surface becomes weathered, filled with color and texture. The veils of color from previous layers are allowed to show through, much like the layers of different vegetation that make up the prairie.</p>
+    </div>
+  </div>
+</section>
 <!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
-    <div class="about-image-wrap fade-up">
-      <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80" alt="Deb Mortl in her studio" />
-      <div class="about-image-accent"></div>
-    </div>
+    <div class="about-image-wrap img-missing fade-up" data-label="Portrait coming soon"></div>
     <div class="fade-up">
       <p class="section-label">About</p>
       <h2 class="section-title">The <em>Artist</em></h2>
       <div class="divider"></div>
       <div class="about-text">
-        <p>Deb Mortl's landscape paintings have evolved from traditional and representational to a more non-objective style as she strives to capture the essence of the landscape — stripping away unnecessary detail to reveal what matters. She believes representation is better left for the camera; her paintings feel more idealistic when she focuses on <strong>color and texture</strong>, letting layers of color resonate against one another.</p>
-        <p>Abstract landscapes become open-ended, letting each viewer decipher their own personal meaning. She rarely starts with a plan — each painting is a negotiation, built with a palette rich in earthy blues, greens and browns, with gold and reds thrown in for good measure.</p>
-        <p>Deb builds many transparent layers until the surface becomes weathered, filled with color and texture. The veils of earlier layers are allowed to show through, much like the layers of vegetation that make up the prairie.</p>
+        <p>Alongside the paintings, Deb makes jewelry by hand — sterling silver and brass, worked with the same instinct for surface and layering. Patinas, hammered texture and set stone echo the palette of the canvases, so a pendant and a painting often read as a matched pair.</p>
+        <p>Collage sometimes adds one more layer of pattern.</p>
       </div>
       <div class="about-tags">
         <span class="about-tag">Oil on Canvas</span>
         <span class="about-tag">Acrylic</span>
         <span class="about-tag">Mixed Media</span>
+        <span class="about-tag">Collage</span>
         <span class="about-tag">Landscape</span>
         <span class="about-tag">Abstract</span>
-        <span class="about-tag">Prairie</span>
+        <span class="about-tag">Sterling Silver</span>
+        <span class="about-tag">Brass</span>
+        <span class="about-tag">Hand-Fabricated Jewelry</span>
       </div>
+      <p class="section-label" style="margin-top:32px;color:#a9a29a">Biography pending Deb's approval</p>
     </div>
   </div>
 </section>
 
-<!-- ANNOUNCEMENTS -->
+<!-- EXHIBITIONS -->
 <section id="announcements">
-  <p class="section-label fade-up">News &amp; Events</p>
-  <h2 class="section-title fade-up">Announcements</h2>
-  <div class="announce-grid fade-up">
-    <div class="announce-item">
-      <p class="announce-date">June 2025</p>
-      <h3 class="announce-title">Summer Group Exhibition</h3>
-      <p class="announce-body">Deb will be showing four new large-format paintings at the Plains Art Collective summer group show. Opening reception June 14th, 6–9pm.</p>
-      <a href="#contact" class="announce-link">Inquire <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </div>
-    <div class="announce-item">
-      <p class="announce-date">May 2025</p>
-      <h3 class="announce-title">New Landscape Series</h3>
-      <p class="announce-body">A new body of work exploring the deep color and texture of the prairie at different seasons. Each piece is built with many transparent layers, letting the surface become weathered and rich.</p>
-      <a href="#gallery" class="announce-link">View the work <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </div>
-    <div class="announce-item">
-      <p class="announce-date">March 2025</p>
-      <h3 class="announce-title">Studio Open Day</h3>
-      <p class="announce-body">Join Deb for an open studio afternoon — see works in progress, ask questions, and experience the space where the work is made. March 22nd, 1–5pm.</p>
-      <a href="#contact" class="announce-link">RSVP <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </div>
+  <p class="section-label fade-up">Exhibitions</p>
+  <h2 class="section-title fade-up">Where the work <em>can be seen</em></h2>
+  <p class="section-intro fade-up">Gallery representation and upcoming exhibition dates are being confirmed.</p>
+  <div class="pending-panel fade-up">
+    <h3>Dates to be announced</h3>
+    <p>This space is ready for Deb's exhibition and event listings, but nothing is published here yet. To ask about a specific piece or arrange a studio visit, please <a href="#contact">get in touch</a>.</p>
   </div>
 </section>
 
@@ -114,35 +142,40 @@
       <p class="section-label">Get in Touch</p>
       <h2 class="section-title">Contact</h2>
       <div class="divider"></div>
-      <p class="contact-intro">For inquiries about commissions, exhibitions, or to learn more about a specific piece, please reach out. Deb responds personally to every message.</p>
+      <p class="contact-intro">For enquiries about a painting or piece of jewelry, commissions, exhibitions, or the studio, please reach out.</p>
       <div class="contact-detail">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <a href="mailto:hello@debmortl.com">hello@debmortl.com</a>
       </div>
       <div class="contact-detail">
         <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>Coastal Studio — available by appointment</span>
+        <span>Cedarburg, Wisconsin — studio visits by appointment</span>
       </div>
     </div>
     <div class="fade-up">
-      <form class="contact-form" onsubmit="handleForm(event)">
+      <!-- The form reports that it isn't connected until REPLACE_WITH_FORM_ID is
+           replaced with a real Formspree ID. See script.js → handleForm(). -->
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" onsubmit="handleForm(event)">
         <div class="form-group">
           <label for="cf-name">Name</label>
-          <input id="cf-name" type="text" placeholder="Your name" required />
+          <input id="cf-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
         </div>
         <div class="form-group">
           <label for="cf-email">Email</label>
-          <input id="cf-email" type="email" placeholder="your@email.com" required />
+          <input id="cf-email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required />
         </div>
         <div class="form-group">
           <label for="cf-subject">Subject</label>
-          <input id="cf-subject" type="text" placeholder="Commission, exhibition, general…" />
+          <input id="cf-subject" name="subject" type="text" placeholder="Painting, jewelry, commission, exhibition…" />
         </div>
         <div class="form-group">
           <label for="cf-msg">Message</label>
-          <textarea id="cf-msg" rows="5" placeholder="Tell Deb about your interest…" required></textarea>
+          <textarea id="cf-msg" name="message" rows="5" placeholder="Tell Deb about your interest…" required></textarea>
         </div>
+        <!-- spam honeypot: hidden from people, bots tend to fill it in -->
+        <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button type="submit" class="form-submit">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </div>
   </div>
@@ -151,25 +184,25 @@
 <!-- FOOTER -->
 <footer>
   <span class="footer-logo">Deb Mortl</span>
-  <span class="footer-copy">&copy; 2025 Deb Mortl. All rights reserved.</span>
+  <span class="footer-copy">&copy; <span id="year">2026</span> Deb Mortl. All rights reserved.</span>
 </footer>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" onclick="closeLightboxBtn()">
+  <button class="lightbox-close" onclick="closeLightboxBtn()" aria-label="Close">
     <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
-  <button class="lightbox-nav lightbox-prev" onclick="lbNav(-1)">
+  <button class="lightbox-nav lightbox-prev" onclick="lbNav(-1)" aria-label="Previous">
     <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
   </button>
   <div class="lightbox-inner">
-    <img class="lightbox-img" id="lbImg" src="" alt="" />
+    <img class="lightbox-img" id="lbImg" alt="" />
     <div class="lightbox-info">
       <h3 class="lightbox-title" id="lbTitle"></h3>
       <p class="lightbox-desc" id="lbDesc"></p>
     </div>
   </div>
-  <button class="lightbox-nav lightbox-next" onclick="lbNav(1)">
+  <button class="lightbox-nav lightbox-next" onclick="lbNav(1)" aria-label="Next">
     <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 12"/></svg>
   </button>
 </div>
