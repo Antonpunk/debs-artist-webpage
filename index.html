@@ -8,7 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<!-- ASSET VERSIONING - bump the ?v= number on BOTH this link and the
+     script.js tag at the foot of this file whenever either file changes.
+     GitHub Pages serves them with Cache-Control: max-age=600, so without a
+     bump returning visitors keep rendering the previous site. -->
+<link rel="stylesheet" href="style.css?v=1" />
 
 <!-- Without JS the scroll-reveal never fires, which would hide every section
      below the fold. This keeps the whole site readable if JS fails or is off. -->
@@ -37,6 +41,9 @@
      PHOTOGRAPHS - only Far North has a real photograph. The other 18 pieces show
      the photo-pending panel. `fallback` must stay empty so that no stock image is
      ever displayed as Deb's work. See images/README.md for filenames and sizing.
+
+     DEPLOYS - see the ASSET VERSIONING note in the head: bump ?v= on the
+     style.css and script.js links whenever either file changes.
 
      Still to confirm with Deb:
        - photographs for the other 18 pieces          -> images/README.md
@@ -221,6 +228,6 @@
   </button>
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=1"></script>
 </body>
 </html>
