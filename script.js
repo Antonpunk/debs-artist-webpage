@@ -15,7 +15,7 @@ const works = [
      `fallback:''` is deliberate. With no photo in images/ and no stock fallback,
      wireImage() shows the "photo coming soon" panel instead of displaying a
      stock photograph of someone else's work as if it were her painting. */
-  {id:1,cat:'painting',title:'Untitled I',info:'Oil on canvas · dimensions to be confirmed',
+  {id:1,cat:'painting',title:'Far North',info:'Oil on canvas · 36 × 36 in · $1,495',
    desc:'Placeholder — Deb\u2019s description to come.',
    img:'images/painting-01.jpg',fallback:'',sold:false},
   {id:2,cat:'painting',title:'Untitled II',info:'Oil on canvas · dimensions to be confirmed',

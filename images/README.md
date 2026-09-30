@@ -18,7 +18,7 @@ servers even though it doesn't on Windows.
 
 | Filename | Shown as |
 |---|---|
-| `painting-01.jpg` | Untitled I — Oil on canvas · dimensions to be confirmed |
+| `painting-01.jpg` | Far North — Oil on canvas · 36 × 36 in · $1,495 |
 | `painting-02.jpg` | Untitled II — Oil on canvas · dimensions to be confirmed |
 | `painting-03.jpg` | Untitled III — Oil on linen · dimensions to be confirmed |
 | `painting-04.jpg` | Untitled IV — Mixed media · dimensions to be confirmed |
