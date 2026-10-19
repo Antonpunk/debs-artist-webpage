@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Deb Mortl">
+  <!-- Monogram mark: ink ground, paper D, italic gold M. Kept as SVG so it stays
+       crisp at 16px and costs nothing to load. -->
+  <rect width="64" height="64" fill="#22201d"/>
+  <text x="31" y="45" text-anchor="middle"
+        font-family="Georgia, 'Palatino Linotype', 'Times New Roman', serif"
+        font-size="38" fill="#faf7f2">D<tspan font-style="italic" fill="#c9a06a">M</tspan></text>
+</svg>
